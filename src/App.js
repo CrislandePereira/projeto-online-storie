@@ -10,13 +10,23 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" render={ (props) => <ProductList { ...props } /> } />
-        <Route exact path="/shopping-cart" render={ () => <ShoppingCart /> } />
+        <Route
+          exact
+          path="/"
+          render={ (props) => <ProductList { ...props } /> }
+        />
+        <Route
+          path="/shopping-cart"
+          render={ (props) => <ShoppingCart { ...props } /> }
+        />
         <Route
           path="/product-detail/:id"
           render={ (props) => <ProductDetail { ...props } /> }
         />
-        <Route path="/checkout" render={ () => <Checkout /> } />
+        <Route
+          path="/checkout"
+          render={ (props) => <Checkout { ...props } /> }
+        />
       </Switch>
     </div>
   );

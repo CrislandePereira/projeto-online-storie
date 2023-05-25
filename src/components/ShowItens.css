@@ -1,0 +1,55 @@
+.show-itens {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 82vh;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.voltar-home {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  margin: 15px 0 10px 70px;
+  width: 100%;
+}
+
+.products-revision {
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  height: 70vh;
+  margin: 0 0 40px auto;
+  margin-left: 80px;
+  overflow-y: scroll;
+  padding: 20px;
+  width: 90%;
+}
+
+.title-revision, .total-finaly {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.each-product-finaly {
+  align-items: center;
+  border-top: 1px solid #444955;
+  display: flex;
+  height: 130px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 30px 0;
+  position: relative;
+  width: 80%;
+}
+
+.prod-name {
+  color: #444955;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 30px;
+  width: 100%;
+}

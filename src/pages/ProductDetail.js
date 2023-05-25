@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/jsx-max-depth */
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { IoAdd, IoRemove } from 'react-icons/io5';
 import { getProductById } from '../services/api';
-import { addToCart } from '../services/cart';
+import { addToCart, getProductByIdCart, updateCart } from '../services/cart';
 import { FormFeedback } from '../components/FormFeedback';
 import { Feedback } from '../components/Feedback';
 import { addFeedback, getFeedbacksByProductId } from '../services/feedback';
@@ -45,7 +47,7 @@ class ProductDetail extends Component {
 
   increaseQuantity = () => {
     const { product } = this.state;
-    if (product.quantity > 0) {
+    if (product.quantity >= 1) {
       this.setState((prevState) => ({
         ...prevState,
         product: {
@@ -58,7 +60,7 @@ class ProductDetail extends Component {
 
   decreaseQuantity = () => {
     const { product } = this.state;
-    if (product.quantity > 0) {
+    if (product.quantity > 1) {
       this.setState((prevState) => ({
         ...prevState,
         product: {
@@ -71,7 +73,14 @@ class ProductDetail extends Component {
 
   handleClickAddToCart = () => {
     const { product } = this.state;
-    addToCart(product, 1);
+    const existingProduct = getProductByIdCart(product.id);
+    if (existingProduct) {
+      existingProduct.quantity += product.quantity;
+      updateCart(existingProduct, existingProduct.quantity);
+    } else {
+      console.log('quantity', product);
+      addToCart(product, product.quantity);
+    }
     const { history } = this.props;
     history.push('/shopping-cart');
   };
@@ -107,7 +116,11 @@ class ProductDetail extends Component {
       <>
         <Header onSearch={ this.handleSearch } />
         <div className="page-container">
-          <div className="right" onClick={ this.handleBackToHome }>
+          <div
+            key="div-lateral"
+            className="right"
+            onClick={ this.handleBackToHome }
+          >
             <div className="voltar">
               <img src={ back } alt="voltar" />
               <p className="back-home">Voltar</p>

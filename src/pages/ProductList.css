@@ -81,6 +81,9 @@ a {
   width: 250px;
 }
 
+.button-add-cart:hover {
+  background-color: #2a9d7e;
+}
 
 /* Message */
 .message-container {

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-max-depth */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -41,7 +43,10 @@ export default function Header({ onSearch }) {
           <img className="icon-search" src={ searchIcon } alt="car" />
         </button>
       </div>
-      <img src={ logo } alt="logo" />
+      <img
+        src={ logo }
+        alt="logo"
+      />
       <div>
         <Link to="/shopping-cart">
           <button className="button-car" data-testid="shopping-cart-button">

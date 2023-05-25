@@ -1,0 +1,41 @@
+.show-feedbacks {
+  align-items: flex-start;
+  background-color: white;
+  border-top: 4px solid #e1e5eb;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-around;
+  min-height: 85px;
+  padding: 20px 0;
+  width: 95%;
+}
+
+.top {
+  align-items: center;
+  display: flex;
+  justify-content: justify;
+  margin-left: 50px;
+  width: 50%;
+}
+
+.bottom {
+  align-items: center;
+  display: flex;
+  justify-content: justify;
+  margin-left: 50px;
+  text-align: justify;
+  width: 95%;
+}
+
+.email {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.message {
+  color: #94979d;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+}

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getCategories, getProductsFromCategoryAndQuery } from '../services/api';
-import './ProductList.css';
-import { addToCart } from '../services/cart';
 import Header from '../components/Header';
+import { addToCart } from '../services/cart';
+import './ProductList.css';
 
-export function ProductList() {
+export function ProductList({ history }) {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [hasSearch, setHasSearch] = useState(false);
@@ -43,6 +44,7 @@ export function ProductList() {
       id: product.id,
     };
     addToCart(productFormat, 1);
+    history.push('/shopping-cart');
   };
 
   return (
@@ -101,15 +103,14 @@ export function ProductList() {
                    && product.price.includes('.') ? parseFloat(product.price).toFixed(2)
                     : `${parseFloat(product.price).toFixed(2)}`}`}
                 </h3>
-
-                <button
-                  className="button-add-cart"
-                  data-testid="product-add-to-cart"
-                  onClick={ () => addLocalStorage(product) }
-                >
-                  Adicionar ao Carrinho
-                </button>
               </Link>
+              <button
+                className="button-add-cart"
+                data-testid="product-add-to-cart"
+                onClick={ () => addLocalStorage(product) }
+              >
+                Adicionar ao Carrinho
+              </button>
             </div>
           ))}
         </div>
@@ -117,3 +118,9 @@ export function ProductList() {
     </>
   );
 }
+
+ProductList.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};

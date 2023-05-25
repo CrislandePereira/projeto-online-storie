@@ -31,7 +31,7 @@ body {
 .product-image {
   align-items: center;
   background-color: white;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -112,6 +112,7 @@ body {
   cursor: pointer;
   font-size: 30px;
   height: 15px;
+  margin: 0 30px;
   width: 15px;
 }
 
@@ -128,6 +129,10 @@ body {
   justify-content: center;
   margin-top: 10px;
   width: 250px;
+}
+
+.button-add-cart:hover {
+  background-color: #2a9d7e;
 }
 
 /* Div Feedbacks */

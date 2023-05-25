@@ -57,7 +57,7 @@ export function FormFeedback({ onSend }) {
   return (
     <div className="form-feedback">
       <div className="feedback-div">
-        <h1>Avaliações</h1>
+        <h1 className="title">Avaliações</h1>
         <div className="feedbacks">
           <div className="input-and-score">
             <input
