@@ -1,26 +1,24 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch, Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { Route, Switch } from 'react-router-dom';
 import { ProductList } from './pages/ProductList';
 import ShoppingCart from './pages/ShoppingCart';
 import ProductDetail from './pages/ProductDetail';
+import Checkout from './pages/Checkout';
 
 function App() {
-  const history = createBrowserHistory();
   return (
-    <Router history={ history }>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" render={ (props) => <ProductList { ...props } /> } />
-          <Route exact path="/shopping-cart" render={ () => <ShoppingCart /> } />
-          <Route
-            path="/product-detail/:id"
-            render={ (props) => <ProductDetail { ...props } /> }
-          />
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <Switch>
+        <Route exact path="/" render={ (props) => <ProductList { ...props } /> } />
+        <Route exact path="/shopping-cart" render={ () => <ShoppingCart /> } />
+        <Route
+          path="/product-detail/:id"
+          render={ (props) => <ProductDetail { ...props } /> }
+        />
+        <Route path="/checkout" render={ () => <Checkout /> } />
+      </Switch>
+    </div>
   );
 }
 

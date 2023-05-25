@@ -76,6 +76,7 @@ class ShoppingCart extends Component {
             </button>
           </div>
         ))}
+        <Link data-testid="checkout-products" to="/checkout">Finalizar Compra</Link>
         {products.length === 0 && (
           <h2 data-testid="shopping-cart-empty-message">Seu carrinho está vazio</h2>
         )}

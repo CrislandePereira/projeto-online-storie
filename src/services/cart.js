@@ -16,7 +16,7 @@ export function getCart() {
 }
 
 export function clearCart() {
-  localStorage.clear();
+  localStorage.removeItem('cart');
 }
 
 export function updateCart(product, quantity) {

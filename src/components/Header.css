@@ -1,0 +1,41 @@
+.header {
+  align-items: center;
+  background: #003be5;
+  display: flex;
+  height: 150px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-search, .button-car {
+  background: transparent;
+  border: none;
+}
+
+.search {
+  align-items: center;
+  background: white;
+  display: flex;
+  height: 40px;
+  margin-left: 40px;
+  width: 240px;
+}
+
+.input-search {
+  background: transparent;
+  border: none;
+  display: absolute;
+  height: 100%;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.icon-search {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.button-car {
+  cursor: pointer;
+  margin-right: 50px;
+}
