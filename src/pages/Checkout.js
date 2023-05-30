@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import ShowItens from '../components/ShowItens';
 import UserInfo from '../components/UserInfo';
 import Header from '../components/Header';
@@ -14,12 +15,14 @@ class Checkout extends React.Component {
   };
 
   render() {
+    const { history } = this.props;
+
     return (
 
       <div>
         <Header onSearch={ this.handleSearch } />
         <div className="checkout-page">
-          <ShowItens />
+          <ShowItens history={ history } />
           <UserInfo />
         </div>
       </div>
@@ -33,4 +36,4 @@ Checkout.propTypes = {
   }).isRequired,
 };
 
-export default Checkout;
+export default withRouter(Checkout);

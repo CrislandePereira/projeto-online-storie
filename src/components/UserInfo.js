@@ -156,6 +156,7 @@ class UserInfo extends React.Component {
                 type="text"
                 placeholder="Complemento"
                 required
+                onChange={ this.onChange }
                 maxLength={ 50 }
                 name="complemento"
                 value={ complemento }
@@ -165,6 +166,7 @@ class UserInfo extends React.Component {
                 type="number"
                 placeholder="Número"
                 required
+                onChange={ this.onChange }
                 maxLength={ 10 }
                 name="numero"
                 value={ numero }
@@ -178,37 +180,43 @@ class UserInfo extends React.Component {
                 name="cidade"
                 value={ cidade }
                 required
+                onChange={ this.onChange }
                 maxLength={ 100 }
               />
-              <select name="estado" value={ estado } className="input-4">
+              <select
+                onChange={ this.onChange }
+                name="estado"
+                value={ estado }
+                className="input-4"
+              >
                 <option placeholder="Estado" value="estado">Estado</option>
-                <option value="estado">Acre</option>
-                <option value="estado">Alagoas</option>
-                <option value="estado">Amapá</option>
-                <option value="estado">Amazonas</option>
-                <option value="estado">Bahia</option>
-                <option value="estado">Ceará</option>
-                <option value="estado">Distrito Federal</option>
-                <option value="estado">Espírito Santo</option>
-                <option value="estado">Goiás</option>
-                <option value="estado">Maranhão</option>
-                <option value="estado">Mato Grosso</option>
-                <option value="estado">Mato Grosso do Sul</option>
-                <option value="estado">Minas Gerais</option>
-                <option value="estado">Pará</option>
-                <option value="estado">Paraíba</option>
-                <option value="estado">Paraná</option>
-                <option value="estado">Pernambuco</option>
-                <option value="estado">Piauí</option>
-                <option value="estado">Rio de Janeiro</option>
-                <option value="estado">Rio Grande do Norte</option>
-                <option value="estado">Rio Grande do Sul</option>
-                <option value="estado">Rondônia</option>
-                <option value="estado">Roraima</option>
-                <option value="estado">Santa Catarina</option>
-                <option value="estado">São Paulo</option>
-                <option value="estado">Sergipe</option>
-                <option value="estado">Tocantins</option>
+                <option value="Acre">Acre</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Amapá">Amapá</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Disttrito Federal">Distrito Federal</option>
+                <option value="Expírito Santo">Espírito Santo</option>
+                <option value="Goiás">Goiás</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Pará">Pará</option>
+                <option value="Paraíba">Paraíba</option>
+                <option value="Paraná">Paraná</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Piauí">Piauí</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Rondônia">Rondônia</option>
+                <option value="Roraíma">Roraima</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Tocantins">Tocantins</option>
               </select>
             </div>
           </div>
