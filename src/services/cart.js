@@ -16,7 +16,7 @@ export function getCart() {
 }
 
 export function clearCart() {
-  localStorage.clear();
+  localStorage.removeItem('cart');
 }
 
 export function updateCart(product, quantity) {
@@ -28,6 +28,7 @@ export function updateCart(product, quantity) {
 
 export function getProductByIdCart(id) {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  console.log(cart);
   const product = cart.find((item) => item.id === id);
   return product;
 }

@@ -1,0 +1,139 @@
+.div-info-comprador {
+  background-color: white;
+  height: 84vh;
+  position: absolute;
+  right: 0;
+  width: 55%;
+}
+
+.campos-preencher {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 35%;
+  justify-content: space-around;
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+.infos-comprador {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 3%;
+  width: 80%;
+}
+
+.inputs-info {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.input-1 {
+  margin-right: 2%;
+  margin-top: 0;
+  padding: 0 1%;
+  width: 50%;
+}
+
+.input-2 {
+  padding: 0 1%;
+  width: 48%;
+}
+
+.input-middle-1 {
+  margin-right: 2%;
+  padding: 0 1%;
+  width: 30%;
+}
+
+.input-middle-2 {
+  padding: 0 1%;
+  width: 68%;
+}
+
+.input-3 {
+  margin-right: 2%;
+  padding: 0 1%;
+  width: 65%;
+}
+
+.input-4 {
+  padding: 0 1%;
+  width: 33%;
+}
+
+input {
+  height: 35px;
+}
+
+.payment-div {
+  align-items: flex-start;
+  border-bottom: 1px solid #94979d;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.payment-forms {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.boleto, .credict-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.boleto {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.credict-card {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 400px;
+}
+
+.icones {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  margin-left: 10px;
+  margin-right: 25px;
+}
+
+.btn-comprar {
+  align-items: center;
+  background-color: #31c28d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 250px;
+}
